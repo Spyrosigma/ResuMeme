@@ -15,7 +15,7 @@ st.write("Upload on your own risk, we can Roast you badly !")
 uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
 text = ""
 if uploaded_file is not None:
-    save_path = os.path.join("uploaded_files", uploaded_file.name)
+    save_path = os.path.join("uploads", uploaded_file.name)
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     with open(save_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
