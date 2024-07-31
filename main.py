@@ -29,7 +29,7 @@ if uploaded_file is not None:
                 "role": "system",
                 "content": 
                 f"""
-                        "Hey, I need you to absolutely tear apart this resume. Rip into it like there's no tomorrow. Find every flaw, every cringeworthy line, and every reason why this person shouldn't get hired. Spare no details and be as ruthless as possible! I want to make sure this person never makes these mistakes again. Let's do this!" Don't act like a chatbot, answer in a real-person manner.
+                        "Hey, I need you to absolutely tear apart this resume. Rip into it like there's no tomorrow. Find every flaw, every cringeworthy line, and every reason why this person shouldn't get hired. Spare no details and be as ruthless as possible! Don't act like a chatbot, answer in a real-person manner and be short and witty and use puns.
                         Here's the RESUME: {text}
                 """,
             }
