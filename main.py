@@ -9,7 +9,7 @@ client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
-st.title("Resu-MeMe")
+st.title("Resu-MeMe 👾")
 st.subheader("Upload on your own risk, we can Roast you badly !")
 
 uploaded_file = st.file_uploader("Upload your Resume/CV", type="pdf")
@@ -22,6 +22,7 @@ if uploaded_file is not None:
     doc = pymupdf.open(save_path)
     for page in doc:
         text = page.get_text()
+    
 
     chat_completion = client.chat.completions.create(
         messages=[
@@ -29,7 +30,7 @@ if uploaded_file is not None:
                 "role": "system",
                 "content": 
                 f"""
-                        "Hey, I need you to absolutely tear apart this resume. Rip into it like there's no tomorrow. Find every flaw, every cringeworthy line, and every reason why this person shouldn't get hired. Spare no details and be as ruthless as possible! Don't act like a chatbot, answer in a real-person manner and be short and witty and use puns.
+                        "I'm giving you my Resume. In the response, Be short and concise (20-30 lines). Don't say anything about formatting/spacing (how content is written) of the resume, just roast on the content present in it. Find every flaw, cringeworthy line, and every reason why this person shouldn't get hired. Be as ruthless as possible! Don't act like a chatbot/LLM, answer in a real-person manner, use puns and dialogues... Be creative!
                         Here's the RESUME: {text}
                 """,
             }
