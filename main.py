@@ -27,8 +27,10 @@ if uploaded_file is not None:
         messages=[
             {
                 "role": "system",
-                "content": f"""This is a Resume/CV, your task is to roast the things that this person has written in resume in very badly, make no mercy ! Try to keep it short and use puns.
-                    Here's the RESUME: {text}
+                "content": 
+                f"""
+                        "Hey, I need you to absolutely tear apart this resume. Rip into it like there's no tomorrow. Find every flaw, every cringeworthy line, and every reason why this person shouldn't get hired. Spare no details and be as ruthless as possible! I want to make sure this person never makes these mistakes again. Let's do this!" Don't act like a chatbot, answer in a real-person manner.
+                        Here's the RESUME: {text}
                 """,
             }
         ],
