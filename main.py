@@ -9,8 +9,8 @@ client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
-st.title("Resume-Roaster")
-st.write("Upload on your own risk, we can Roast you badly !")
+st.title("Resu-MeMe")
+st.subheader("Upload on your own risk, we can Roast you badly !")
 
 uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
 text = ""
